@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container-fluid" *ngIf="loggedinpage == ''">
+   
+    
+    <div class="row" id="r1">
+        <div class="col-sm-5">
+            <img src="assets/logo.png" alt="logo">
+        </div>
+        <div class="col-sm-4">
+            <nav class="navbar">
+                <ul class="navbar-links">
+                  <li><a routerLink="aboutus"><button>ABOUT US</button></a></li>
+                  <li><a href="instruction"><button>INSTRUCTIONS</button></a></li>
+                  <li><a href="contactus"><button>CONTACT US</button></a></li>
+                </ul>
+              </nav>
+         </div>
+         <div class="col-sm-3">
+            <div class="socialtop">
+                <div class="top-social">
+                    <a><i class="fa fa-facebook"></i></a>
+                    <a><i class="fa fa-twitter"></i></a>
+                    <a><i class="fa fa-instagram"></i></a>
+                    <a><i class="fa fa-pinterest"></i></a>
+                    <a><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8" style="background-color: black;">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-sm-4" style="background-color: black;" id="form"><app-form (logindetails)="logindetails($event)"></app-form> </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container-fluid" *ngIf="loggedinpage == 'farmer login'">
+    <div class="row" style="background-color: black;">
+        <div class="col-sm-4">
+            <img src="/assets/logo.png" alt="" id="logoseller_add">
+        </div>
+        <div class="col-sm-5">
+            <nav id="nav1seller_add">
+                <ul id="ul1seller_add">
+                    <li id="li1seller_add"><a style="color: white;" (click)="sellerpage ='sellproducts'">SELL GOODS</a></li>
+                    <li id="li1seller_add"><a style="color: white;" (click)="sellerpage = 'rentland'">LAND RENTING</a></li>
+                    <li id="li1seller_add"><a  style="color: white;" (click)="sellerpage ='wholesale'">BIDDING GOODS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-3">
+            
+            <button (click)="sellerpage = 'orders'" style="width: 125px;
+            height: 40px;
+            float: right;
+            margin-right: 30px;
+            margin-top: 30px;">Orders</button>
+        </div>
+    </div>
+    <div class="row" id="sellerdisplay">
+        <div class="col-sm-12">
+            <div  *ngIf="sellerpage == 'sellproducts'"><app-sellproducts></app-sellproducts></div>
+            <div  *ngIf="sellerpage == 'wholesale'"><app-wholesaleseller></app-wholesaleseller></div>
+            <div  *ngIf="sellerpage == 'rentland'"><app-rentlandseller></app-rentlandseller></div>
+            <div  *ngIf="sellerpage == 'orders'"><app-orders></app-orders></div>
+                    </div>
+    </div>
+
+</div>
+
+<div class="container-fluid" *ngIf="loggedinpage == 'consumer login'">
+    <div class="row" style="background-color: black;">
+        <div class="col-sm-4">
+            <img src="/assets/logo.png" alt="" id="logoseller_add">
+        </div>
+        <div class="col-sm-5">
+            <nav id="nav1seller_add">
+                <ul id="ul1seller_add">
+                    <li id="li1seller_add"><a style="color: white;" (click)="consumerpage ='buyproducts'">BUY GOODS</a></li>
+                    <li id="li1seller_add"><a  style="color: white;" (click)="consumerpage = 'rentland'">RENTED LANDS</a></li>
+                    <li id="li1seller_add"><a  style="color: white;" (click)="consumerpage ='wholesale'">wHOLESALE BID</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-3">
+            <button (click)="consumerpage = 'cart'" style="width: 125px;
+            height: 40px;
+            float: right;
+            margin-right: 30px;
+            margin-top: 30px;">Cart</button>
+    
+        </div>
+    </div>
+    <div class="row" id="sellerdisplay">
+        <div class="col-sm-12">
+            <div  *ngIf="consumerpage == 'buyproducts'"><app-buygoods></app-buygoods></div>
+            <div  *ngIf="consumerpage == 'wholesale'"><app-wholesalebid></app-wholesalebid></div>
+            <div  *ngIf="consumerpage == 'rentland'"><app-landrents></app-landrents></div>
+            <div  *ngIf="consumerpage == 'cart'"><app-cart (gotoconsumer)="gotoconsumer($event)"></app-cart></div>
+
+
+        </div>
+    </div>
+
+</div>

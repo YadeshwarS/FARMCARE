@@ -1,0 +1,46 @@
+/* Set font properties */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+ 
+  /* Set text color and background color */
+  p {
+    color: #333;
+    ;
+    padding: 20px;
+
+  }
+  
+  /* Set margin to provide some space around the paragraph */
+  p {
+    margin: 20px 0;
+  }
+  
+  /* Add a border to the paragraph */
+  #r1 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: lightgreen;
+  }
+  #r2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:skyblue;
+  }
+  
+  /* Add text shadow to create depth */
+
+  
+  /* Set text alignment */
+  p {
+    text-align: justify;
+  }
+ img{
+  height: 100%;
+  width: 103.5%;
+ }
+ #img2{
+  margin-left: -12px;
+}

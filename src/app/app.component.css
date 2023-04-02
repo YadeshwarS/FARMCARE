@@ -1,0 +1,335 @@
+img{
+    height: 170px;
+    width: 500px;
+    float: left;
+    margin-top: -50px;
+    margin-left: -70px;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+nav{
+    height: 45px;
+    width: 100%;
+    margin-left: -150px;
+
+}
+
+
+ul li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    
+}
+ul li a{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 50px;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-left: 50px;
+    
+}
+
+ul li a:hover{
+    color: #ff7d00;
+
+}
+
+a i{
+    cursor: pointer;
+    color: black;
+}
+
+.socialtop{
+    float: right;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.top-social{
+    padding: 14px 15px;
+}
+.top-social a{
+    padding: 13px;
+}
+.top-social a i:hover{
+    color: #ff7d00;
+}
+.top-social a i{
+    color: white;
+}
+button {
+    background-color: #4CAF50;
+    width: 80%;
+  
+    text-align: center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #2f6238;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+  
+
+
+@media screen and (max-width: 1052px)
+{
+   
+    ul{
+        top: -400px;
+        z-index: -1;
+        margin-top: -15px;
+        right: 0;
+        left: 0;
+        width: 200px;
+        background-color: #222222;
+        display: inline-block;
+        transition: top .4s;
+        margin-top: 0;
+    }
+    ul.show{
+        top: 60px;
+    }
+    ul li{
+        top:0;
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+    #bar{
+        display: inline;
+    }
+}
+@media screen and (max-width: 800px){
+   
+    ul{
+        width: 100%;
+    }
+    .toggle{
+        top: 0;
+    }
+    .socialtop{
+        display: inline-block;
+    }
+    .socialtop a:hover{
+        color: white;
+    }
+    #bar{
+        display: inline;
+    }
+   
+
+}
+
+
+
+nav.sticky ul{
+    width: auto;
+}
+ul li a:focus-within{
+    color: purple;
+}
+
+#r1{
+    
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
+/* farner page */
+/* .container-fluid{
+    background-color: black;
+}
+#logoseller_add{
+    height: 170px;
+    width: 500px;
+    float: left;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+#ul1seller_add #li1seller_add{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    margin-top: 60px;
+    
+}
+#ul1seller_add #li1seller_add a{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 70px;
+    display: inline-block;
+
+}
+
+#ul1seller_add #li1seller_add a:hover{
+    color: lightgreen;
+    font-weight: bold;
+    transform: translateY(-2px);
+
+
+}
+
+a i{
+    cursor: pointer;
+    color: white;
+    float: right;
+    margin-top: 20%;
+    font-size:xx-large;
+    margin-right: 30px;
+}
+a i:hover {
+    color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+
+
+@media screen and (max-width: 1052px)
+{
+   
+    ul{
+        top: -400px;
+        z-index: -1;
+        margin-top: -15px;
+        right: 0;
+        left: 0;
+        width: 200px;
+        background-color: #222222;
+        display: inline-block;
+        transition: top .4s;
+        margin-top: 0;
+    }
+    ul.show{
+        top: 60px;
+    }
+    ul li{
+        top:0;
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+    #bar{
+        display: inline;
+    }
+}
+@media screen and (max-width: 800px){
+   
+    ul{
+        width: 100%;
+    }
+    .toggle{
+        top: 0;
+    }
+    .socialtop{
+        display: inline-block;
+    }
+    .socialtop a:hover{
+        color: white;
+    }
+    #bar{
+        display: inline;
+    }
+   
+
+
+#nav1seller_add.sticky ul{
+    width: auto;
+}
+#ul1seller_add #li1seller_add a:focus-within{
+    color: purple;
+}
+
+
+} */
+
+/* form and display */
+/* .c{height: 100px;background-color: black;}
+
+*{
+    width: 100%;
+    background-color: black;
+}
+h4{
+    text-align: center;
+}
+.container-fluid{
+    background-image: url('/assets/backi.jpg');
+    background-size: cover;
+}
+.card-body{
+    width: 35%;
+    margin-left: 33%;
+    color: white;
+}
+.col-4{
+    width: 50%;
+    
+}
+#form{
+    top: 0;
+    float: right;
+}
+#fill{
+    margin-top: 8%;
+}
+#btn{
+    background-color: lightgreen;
+}
+#food{
+    color: white;
+} */
+
+
+#sellerdisplay{
+    background-color: black;
+    color: white;
+    height: 80vh;
+}

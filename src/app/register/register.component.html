@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Form</title>
+</head>
+<body>
+	<div class="register-box">
+		<h1>Register</h1>
+		<form>
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" required>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+			<label for="farmer">FARMER</label>
+			<input type="radio" id="farmer" name="options" value="FARMER">
+			<label for="consumer">CONSUMER</label>
+			<input type="radio" id="consumer" name="options" value="CONSUMER">
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			<label for="confirm-password">Confirm Password</label>
+			<input type="password" id="confirm-password" name="confirm-password" required>
+			<button type="submit" onclick="register()">Register</button>
+		</form>
+	</div>
+
+</body>
+</html>

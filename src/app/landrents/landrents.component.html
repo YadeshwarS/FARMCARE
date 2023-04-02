@@ -1,0 +1,20 @@
+<div class="container1" style="display: flex;flex-wrap: wrap;background-color: black;">
+    <div *ngFor="let product of landList;let i=index" class="item">
+        <div class="card cardStyle">
+            <img class="card-img-top heightImg" [src]="product.land_img" alt="Card image">
+            <div class="card-body" style="color: black;">
+                <h4 class="card-title ellipses" >{{product.land_owner}}</h4>
+                <p class="card-text" style="font-weight: bold;">Area: {{product.area}}</p>
+                <p class="card-text" style="height: 48px;">Address: {{product.land_address}}</p>
+                
+                <form action="mailto://farmcareoficial10@gmail.com">
+                    Email:<input type="text" [value]="logged_in_email" style="margin-left: 44px;"><br>
+                    Price bid:<input type="text" placeholder="Enter bid amount"><br>
+                    <input type="submit" value="Bid"  style="width: 100px;height: 40px;background-color: green;color: white;" (click)="bidmade()">    
+                    <input type="reset" value="Clear" style="width: 100px;height: 40px;background-color: green;color: white;margin-left: 20px;">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>

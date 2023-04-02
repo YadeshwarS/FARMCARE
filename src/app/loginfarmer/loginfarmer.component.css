@@ -1,0 +1,51 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes example {
+    0%   {left: 0;}
+    25%  {left: 10px;}
+    50%  {left: -10px;}
+    75%  {left: 10px;}
+    100% {left: 0;}
+  }
+  
+  #login_input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #login_btn {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  #login_btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-5px);
+  }
+  
+  #login_btn:active {
+    transform: translateY(0px);
+  }
+  

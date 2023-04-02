@@ -1,0 +1,59 @@
+<div>
+    <div class="container-fluid" *ngIf="login_type == 'form'">
+        <div class="box">
+            <div>
+                <h4>WANT TO LOGIN AS FARMER:</h4>
+                <button id="farmer" (click)="login_type = 'farmer'">LOGIN AS FARMER</button>
+            </div>
+            <div>
+                <h4>WANT TO LOGIN AS CONSUMER:</h4>
+                <button id="consumer" (click)="login_type = 'consumer'">LOGIN AS CONSUMER</button>
+            </div>
+            <div>
+                <h4>ARE YOU NEW FOR FARMCARE:</h4>
+            <button id="reg" (click)="login_type = 'register'">REGISTER</button>
+            </div>
+        </div>
+    </div>
+    <div class="register-box" style="background-color: white;" *ngIf="login_type == 'register'">
+        <h1>Register</h1>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" [(ngModel)]="reg_username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" [(ngModel)]="reg_email" id="email" name="email" required>
+            <label for="farmer">FARMER</label>
+            <input type="radio" [(ngModel)]="reg_type" id="farmer" name="options" value="farmer">
+            <label for="consumer">CONSUMER</label>
+            <input type="radio" [(ngModel)]="reg_type"  id="consumer" name="options" value="consumer">
+
+            <label for="password">Password</label>
+            <input type="password" [(ngModel)]="reg_password" id="password" name="password" required>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" [(ngModel)]="reg_c_password" id="confirm-password" name="confirm-password" required>
+            <button type="submit" (click)="register()">Register</button>
+            <button id="login_btn" (click)="login_type = 'form'">Back</button>
+        </form>
+    </div>
+    <div class="container register-box" style="background-color: white;" id="container" *ngIf="login_type == 'farmer'">
+        <h1 id="h1">Welcome</h1>
+        <form>
+        <input type="text" [(ngModel)]="logged_in_email" name="email" placeholder="Username">
+        <input type="password" [(ngModel)]="logged_in_password" name="password" placeholder="Password">
+        <button id="login_btn" (click)="login()">Login</button>
+        <button id="login_btn" (click)="login_type = 'consumer'">Login as Consumer</button>
+        <button id="login_btn" (click)="login_type = 'register'">Create a new account</button>
+        </form>
+    </div>
+    <div class="container register-box" style="background-color: white;" id="container" *ngIf="login_type == 'consumer'">
+        <h1 id="h1">Welcome</h1>
+        <form>
+        <input type="text" [(ngModel)]="logged_in_email" name="email" class="login_input" placeholder="Username">
+        <input type="password" [(ngModel)]="logged_in_password" name="password" class="login_input" placeholder="Password">
+        <button id="login_btn" (click)="login()">Login</button>
+        <button id="login_btn" (click)="login_type = 'farmer'">Login as Farmer</button>
+        <button id="login_btn" (click)="login_type = 'register'">Create a new account</button>
+
+        </form>
+    </div>
+</div>

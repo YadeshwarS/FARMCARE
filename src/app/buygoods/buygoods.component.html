@@ -1,0 +1,17 @@
+<div class="container1" style="display: flex;flex-wrap: wrap;background-color: black;">
+    <div *ngFor="let product of productList;let i=index" class="item">
+        <div class="card cardStyle">
+            <img class="card-img-top heightImg" [src]="product.p_img_path" alt="Card image">
+            <div class="card-body" style="color: black;">
+                <h4 class="card-title ellipses" >{{product.p_name}}</h4>
+                <p class="card-text" style="font-weight: bold;">Price: {{product.p_price}}</p>
+                <p class="card-text" style="height: 48px;">Dealer Name: {{product.dealer_name}}</p>
+                <p class="card-text ellipses1"
+                >Quantity: {{product.qty}}</p>
+                <p class="card-text ellipses1"
+                >Category: {{product.category}}</p>
+                <a class="btn btn-primary" (click)="addToCart(product)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>

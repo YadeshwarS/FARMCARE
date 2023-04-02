@@ -1,0 +1,36 @@
+<div class="card p-3 shadow">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 35%;"></th>
+                    <th scope="col">Product Description</th>
+                    <th scope="col">Price</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-dark" *ngFor="let product of orderList">
+                    <td id="img_height"><img class="card-img-top" [src]="product.p_img_path"
+                         alt="Card image" 
+                         style="width:250px;height:200px;
+                         padding: 20px;
+                         text-align: center;"></td>
+                    <td style="padding: 30px;">
+                        <div >{{product.p_name}}</div>
+                    <br>
+                        Dealer name: {{product.dealer_name}}
+                    <br>
+                        <div>Quantity: {{product.qty}}</div>
+                    <br>
+                        category: {{product.category}}
+                    </td>
+                    <td style="padding: 30px;">
+                        {{product.p_price}}
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

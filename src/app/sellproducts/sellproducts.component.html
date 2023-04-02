@@ -1,0 +1,116 @@
+<!-- <div class="container-fluid">
+    
+    <div class="row">
+     <div class="col-sm-7">
+      <div class="card shadow">
+        <div class="card-body">
+          <form action="" id="form">
+            <div class="mb-3">
+              <h4>SELL PRODUCTS</h4>
+            </div>
+            <div id="fill">
+              <div class="mb-3">
+                <label for="Name" class="form-label">Dealer Name:</label><br>
+                <input type="text" name="name" class="form-control" placeholder="Enter Dealer's name">
+              </div>
+              <div class="mb-3">
+                <label for="prname" class="form-label">Product Name:</label><br>
+                <input type="text" name="prname" class="form-control" placeholder="Enter name of product">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Product Price:</label><br>
+                <input type="number" name="price" class="form-control" placeholder="Enter price of product">
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Product Image:</label><br>
+                <input type="text" name="link" class="form-control" placeholder="Paste image in drive link form">
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Product Type:</label><br>
+                  <select name="foodtype" id="food" aria-placeholder="Product type">
+                    <option value="none">NONE</option>
+                    <option value="cereals">CEREALS</option>
+                    <option value="spices">SPICES</option>
+                    <option value="dairy">DAIRY PRODUCTS</option>
+                    <option value="veg">VEGETABLES</option>
+                    <option value="pulse">PULSES</option>
+                    <option value="fruit">FRUITS</option>
+                    <option value="other">OTHERS</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-info" id="btn">SUBMIT</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+      
+     </div>
+   -->
+
+   <div class="conatiner-fluid">
+    <div class="row">
+      <div class="col-sm-7" id="col1">
+          <div class="card shadow p-3">
+              <div class="form-floating mb-3">
+                  <h5 class="text-centered-warning">Add Product</h5>
+              </div>
+              <div>
+                  <label for="dealer_name">Dealer Name:</label>
+                  <input type="text" class="form-control" id="dealer_name" name="dealer_name" [(ngModel)]="dealer_name"
+                      placeholder="Enter dealer name">
+              </div>
+              <div>
+                  <label for="p_name">Product Name:</label>
+                  <input type="text" class="form-control" id="p_name" name="p_name" [(ngModel)]="p_name"
+                      placeholder="Enter product name">
+              </div>
+              <div>
+                  <label for="p_img_path">Product Image path:</label>
+                  <input type="text" class="form-control" id="p_img_path" name="p_img_path" [(ngModel)]="p_img_path"
+                      placeholder="Enter product image path(as drive link)">
+              </div>
+              <div>
+                  <label for="p_price">Price:</label>
+                  <input type="text" class="form-control" id="p_price" name="p_price" [(ngModel)]="p_price"
+                      placeholder="Enter price">
+              </div>
+              <div>
+                  <label for="qty">Quantity:</label>
+                  <input type="text" class="form-control" id="qty" name="qty"
+                      [(ngModel)]="qty" placeholder="Enter seller name">
+              </div>
+              <div>
+                  <label for="category">Category:</label>
+                  <label for="image" class="form-label">Product Type:</label><br>
+                  <select [(ngModel)]="category" name="foodtype" id="food" aria-placeholder="Product type">
+                    <option value="none">NONE</option>
+                    <option value="Cereals">CEREALS</option>
+                    <option value="Spices">SPICES</option>
+                    <option value="Dairy">DAIRY PRODUCTS</option>
+                    <option value="Vegetables">VEGETABLES</option>
+                    <option value="Pulse">PULSES</option>
+                    <option value="Fruits">FRUITS</option>
+                    <option value="Other">OTHERS</option>
+                  </select>
+              </div>
+              <button id="addbutton" type="button" class="btn btn-outline-success" (click)="addProduct()">Add
+                  Product</button>
+          </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="card">
+          <img [src]=" p_img_path" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h2 style="color:white"><b>{{p_name}}</b></h2> 
+              <h3 style="color:white">Rs.{{p_price}}</h3>
+              <h4 style="color:white">Quantity:{{qty}}</h4>
+              <h4 style="color:white">Dealer name:{{dealer_name}}</h4>
+              <h4 style="color:white">Category:{{category}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>

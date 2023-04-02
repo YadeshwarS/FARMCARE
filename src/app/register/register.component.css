@@ -1,0 +1,31 @@
+.register-box {
+	border: 2px solid black;
+	padding: 20px;
+	width: 400px;
+	margin: auto;
+}
+
+.register-box h1 {
+	text-align: center;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid black;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+}

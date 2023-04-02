@@ -1,0 +1,46 @@
+<div class="conatiner-fluid">
+    <div class="row">
+      <div class="col-sm-7" id="col1">
+          <div class="card shadow p-3">
+              <div class="form-floating mb-3">
+                  <h5 class="text-centered-warning">Add Land</h5>
+              </div>
+              <div>
+                  <label for="dealer_name">Land Owner Name:</label>
+                  <input type="text" class="form-control" id="dealer_name" name="dealer_name" [(ngModel)]="land_owner"
+                      placeholder="Enter land owner name">
+              </div>
+              <div>
+                  <label for="p_name">Area(in l x b):</label>
+                  <input type="text" class="form-control" id="p_name" name="p_name" [(ngModel)]="area"
+                      placeholder="Enter area">
+              </div>
+              <div>
+                  <label for="p_img_path">Land Image path:</label>
+                  <input type="text" class="form-control" id="p_img_path" name="p_img_path" [(ngModel)]="land_img"
+                      placeholder="Enter land image path(as drive link)">
+              </div>
+              <div>
+                  <label for="p_price">Address:</label>
+                  <input type="text" class="form-control" id="p_price" name="p_price" [(ngModel)]="land_address"
+                      placeholder="Enter address">
+              </div>
+              
+              
+              <button id="addbutton" type="button" class="btn btn-outline-success" (click)="addLand()">Add
+                  Product</button>
+          </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="card">
+          <img [src]=" land_img" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h2 style="color:white"><b>Land owner:{{land_owner}}</b></h2> 
+              <h3 style="color:white">Area:{{area}}</h3>
+              <h4 style="color:white">Land Address:{{land_address}}</h4>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
